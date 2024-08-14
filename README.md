@@ -1,79 +1,55 @@
 # Project 1 README
 
-Student: Full Name (123456789)
+Student: William Yu 921166191
 
 ## Project Status
-This the current status of the project ...
+All questions are resolved
 
 ## Known Issues
-The project fails to function properly in ...
+No known issue except for redundancy in some circuit.
 
 ## References
-* [Build an XOR gate from AND/NOT](https://electronics.stackexchange.com/questions/487529/build-an-xor-gate-from-and-not)
-* [Some other link](https://stackoverflow.com)
+No references besides kind advises from professor and TA!
 
 ## Generative AI Use
-I used ChatGPT for Prompt 1, and ZZZZZ for Prompt 2....
+I used ChatGPT for Prompt 1 asking for which logic gate should I use. 
+
+I use ChatGPT to quickly summarize what number light up which segment for Question 3. 
 
 ### Prompt 1
-How do you create an XOR from only and/or/not gates?
+What logic gate output 1 when all input are either both zero or both 1
 
 ### Response 1
-To create an XOR (exclusive OR) gate using only AND, OR, and NOT gates, you can follow these steps. The XOR gate outputs true only when the inputs are different.
+The logic gate that outputs 1 when all inputs are either both 0 or both 1 is the XNOR gate (exclusive-NOR gate).
 
-The truth table for XOR is:
-
-| A | B | A XOR B |
-|---|---|---------|
-| 0 | 0 |    0    |
-| 0 | 1 |    1    |
-| 1 | 0 |    1    |
-| 1 | 1 |    0    |
-
-The Boolean expression for XOR can be derived as:\
-A &oplus; B = (A &and; &not; B) &or; (&not; A &and; B)
+XNOR Gate Truth Table:
+Input A	Input B	Output (A XNOR B)
+0	0	1
+0	1	0
+1	0	0
+1	1	1
+Explanation:
+The XNOR gate outputs 1 when the inputs are the same (both 0 or both 1).
+If the inputs are different (0, 1 or 1, 0), the output will be 0.
+In other words, the XNOR gate gives a 1 when the inputs are equal.
 
 This can be broken down into the following steps:
 
-1. Create \(&not; A\) and \(&not; B\) using NOT gates.
-1. Create \(A &and; &not; B\) and \(&not; A &and; B\) using AND gates.
-1. Combine the results of the two AND gates using an OR gate.
-
-Here is the step-by-step logic construction:
-
-1. **NOT gates** to get \(&not; A\) and \(&not; B\):\
-   NOT(A) &rarr; &not; A\
-   NOT(B) &rarr; &not; B
-
-1. **AND gates** to get \(A &and; &not; B\) and \(&not; A &and; B\):\
-   A &and; &not; B &rarr; AND(A, &not; B)\
-   &not; A &and; B &rarr; AND(&not; A, B)
-
-1. **OR gate** to get the final result:\
-   (A &and; &not; B) &or; (&not; A &and; B) &rarr; OR(AND(A, &not; B), AND(&not; A, B))
-
-Putting it all together in a circuit diagram:
-
-1. Input \(A\) goes to a NOT gate to produce \(&not; A\).
-1. Input \(B\) goes to a NOT gate to produce \(&not; B\).
-1. Input \(A\) and the output of the NOT gate for \(B\) go to an AND gate to produce \(A &and; &not; B\).
-1. Input \(B\) and the output of the NOT gate for \(A\) go to an AND gate to produce \(&not; A &and; B\).
-1. The outputs of the two AND gates go to an OR gate to produce the final output \(A &oplus; B\).
-
-In terms of Boolean logic:\
-XOR(A, B) = \(A &and; &not; B\) &or; \(&not; A &and; B\) 
-
-This way, you have constructed an XOR gate using only AND, OR, and NOT gates.
-
 ### Changes 1
-I needed XNOR, so changed it to:\
-&not;\(\(A &and; &not; B\) &or; \(&not; A &and; B\)\)
+I use it for creating circuit for comparing if X and Y are equal.
 
 ### Prompt 2
-My other prompt...
+Show at what number each segment will be 1
 
 ### Response 2
-The other response...
+Summary of Segment Activations:
+Segment A is 1 for digits: 0, 2, 3, 5, 6, 7, 8, 9
+Segment B is 1 for digits: 0, 1, 2, 3, 4, 7, 8, 9
+Segment C is 1 for digits: 0, 1, 3, 4, 5, 6, 7, 8, 9
+Segment D is 1 for digits: 0, 2, 3, 5, 6, 8, 9
+Segment E is 1 for digits: 0, 2, 6, 8
+Segment F is 1 for digits: 0, 4, 5, 6, 8, 9
+Segment G is 1 for digits: 2, 3, 4, 5, 6, 8, 9
 
 ### Changes 2
-The other changes made...
+I create the secondary logic for connecting digit to segement based on the answer. 
