@@ -36,7 +36,7 @@ In other words, the XNOR gate gives a 1 when the inputs are equal.
 This can be broken down into the following steps:
 
 ### Changes 1
-I use it for creating circuit for comparing if X and Y are equal.
+I use it for creating circuit for comparing if X and Y are equal. I use three XNOR gate to compare each X and Y and put the output of the three to an AND gate. 
 
 ### Prompt 2
 Show at what number each segment will be 1
@@ -52,4 +52,4 @@ Segment F is 1 for digits: 0, 4, 5, 6, 8, 9
 Segment G is 1 for digits: 2, 3, 4, 5, 6, 8, 9
 
 ### Changes 2
-I create the secondary logic for connecting digit to segement based on the answer. 
+I create the secondary logic for connecting digit to segement based on the answer, using mostly or gates and some not gates. 
